@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eXt-OB-kf4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="S3U-TD-BLp">
+            <objects>
+                <navigationController id="eXt-OB-kf4" customClass="WSNavigationController" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="usf-pM-o7d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gjl-Db-si8" kind="relationship" relationship="rootViewController" id="39O-3U-7x5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71y-Dr-bzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-570.5" y="452.5"/>
+        </scene>
+        <!--天气-->
+        <scene sceneID="kkJ-ht-vtu">
+            <objects>
+                <viewController storyboardIdentifier="weatherPageVCViewController" id="gjl-Db-si8" customClass="weatherPageVCViewController" customModule="毕业设计" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xju-4O-JCm"/>
+                        <viewControllerLayoutGuide type="bottom" id="zJq-co-pf9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xwn-qC-Daj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="请输入你要查询的城市" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-oE-et9">
+                                <rect key="frame" x="47" y="114" width="280" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="U3M-5E-hw3"/>
+                                    <constraint firstAttribute="width" constant="280" id="cO7-ho-VWl"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqf-nQ-LxY">
+                                <rect key="frame" x="318" y="164" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="JHx-GN-5mf"/>
+                                    <constraint firstAttribute="height" constant="30" id="ajr-SF-myn"/>
+                                </constraints>
+                                <state key="normal" title="搜索"/>
+                                <connections>
+                                    <action selector="searchBtn:" destination="gjl-Db-si8" eventType="touchUpInside" id="C3m-ch-qvk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快去搜索栏查询今天的天气吧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrn-PC-Y8q">
+                                <rect key="frame" x="54" y="313" width="266" height="47"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="INK-5Z-gP1"/>
+                                    <constraint firstAttribute="height" constant="47" id="Xno-Ix-YhR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2jR-4o-mAh">
+                                <rect key="frame" x="145" y="390" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="AHj-kr-Tio"/>
+                                    <constraint firstAttribute="height" constant="85" id="CjD-lN-Vst"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9H-tI-IE0">
+                                <rect key="frame" x="124" y="213" width="126" height="42"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="6XS-3u-GcB"/>
+                                    <constraint firstAttribute="height" constant="42" id="M6v-JR-sGN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近三日天气情况" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHO-RH-VlD">
+                                <rect key="frame" x="44" y="495" width="287" height="92"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="92" id="4HK-K0-WKE"/>
+                                    <constraint firstAttribute="width" constant="287" id="X06-UP-Cva"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日天气" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBF-eA-u3U">
+                                <rect key="frame" x="137" y="276" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AQH-OU-qEI"/>
+                                    <constraint firstAttribute="height" constant="21" id="Qzb-cA-3WW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97331625970000002" green="1" blue="0.89020152649999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3nl-oE-et9" firstAttribute="top" secondItem="Xju-4O-JCm" secondAttribute="bottom" constant="50" id="0Wm-8h-6ks"/>
+                            <constraint firstItem="Wqf-nQ-LxY" firstAttribute="top" secondItem="3nl-oE-et9" secondAttribute="bottom" constant="6" id="1V7-K8-djV"/>
+                            <constraint firstItem="2jR-4o-mAh" firstAttribute="top" secondItem="nrn-PC-Y8q" secondAttribute="bottom" constant="30" id="A8I-kb-4f0"/>
+                            <constraint firstItem="2jR-4o-mAh" firstAttribute="centerX" secondItem="3nl-oE-et9" secondAttribute="centerX" id="Avw-2g-RTA"/>
+                            <constraint firstItem="3nl-oE-et9" firstAttribute="centerX" secondItem="Xwn-qC-Daj" secondAttribute="centerX" id="CoO-ax-rns"/>
+                            <constraint firstItem="cHO-RH-VlD" firstAttribute="centerX" secondItem="Xwn-qC-Daj" secondAttribute="centerX" id="Lop-YB-y3c"/>
+                            <constraint firstItem="v9H-tI-IE0" firstAttribute="top" secondItem="3nl-oE-et9" secondAttribute="bottom" constant="55" id="Z8L-l9-5SQ"/>
+                            <constraint firstItem="WBF-eA-u3U" firstAttribute="top" secondItem="v9H-tI-IE0" secondAttribute="bottom" constant="21" id="feD-8r-rJE"/>
+                            <constraint firstItem="v9H-tI-IE0" firstAttribute="centerX" secondItem="3nl-oE-et9" secondAttribute="centerX" id="i4W-9p-fzQ"/>
+                            <constraint firstItem="cHO-RH-VlD" firstAttribute="top" secondItem="2jR-4o-mAh" secondAttribute="bottom" constant="20" id="l8k-MT-E2E"/>
+                            <constraint firstItem="WBF-eA-u3U" firstAttribute="centerX" secondItem="3nl-oE-et9" secondAttribute="centerX" id="tQV-VY-4lI"/>
+                            <constraint firstItem="nrn-PC-Y8q" firstAttribute="top" secondItem="WBF-eA-u3U" secondAttribute="bottom" constant="16" id="ubF-xo-AWs"/>
+                            <constraint firstItem="nrn-PC-Y8q" firstAttribute="centerX" secondItem="Xwn-qC-Daj" secondAttribute="centerX" id="wgd-fr-6X5"/>
+                            <constraint firstItem="Wqf-nQ-LxY" firstAttribute="leading" secondItem="Xwn-qC-Daj" secondAttribute="leadingMargin" constant="302" id="xwX-6D-vNS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="天气" id="uSA-yn-eGY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cityL" destination="v9H-tI-IE0" id="ePe-9P-zcH"/>
+                        <outlet property="maxImage" destination="2jR-4o-mAh" id="HHL-8X-DPI"/>
+                        <outlet property="maxTemp" destination="nrn-PC-Y8q" id="7xO-HT-kie"/>
+                        <outlet property="searchBar" destination="3nl-oE-et9" id="O4Y-n4-aGV"/>
+                        <outlet property="searchBtn" destination="Wqf-nQ-LxY" id="258-v8-4e6"/>
+                        <outlet property="weatherSummaryL" destination="cHO-RH-VlD" id="CBw-ys-3tJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYe-PK-VsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120.5" y="452.5"/>
+        </scene>
+    </scenes>
+</document>
